@@ -1,6 +1,7 @@
 import ComponentWithFunction from "./ComponentWithFunction";
 import Greeting from "./ComponentWithClass";
 import EventHandling from "./EventHandling";
+import StateAndProps from "./State_Props";
 function TempFoundational() {
   return (
     <div>
@@ -9,6 +10,7 @@ function TempFoundational() {
       <Greeting></Greeting>
 
       <EventHandling></EventHandling>
+      <StateAndProps></StateAndProps>
     </div>
   );
 }
