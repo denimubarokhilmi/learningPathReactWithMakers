@@ -1,3 +1,5 @@
+import TempFoundational from "./components/FoundationalReact./TempFoundational";
+
 function App() {
   return (
     <>
@@ -8,6 +10,7 @@ function App() {
       >
         learning React with makers
       </h1>
+      <TempFoundational></TempFoundational>
     </>
   );
 }
