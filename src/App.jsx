@@ -1,5 +1,5 @@
-import TempFoundational from "./components/FoundationalReact./TempFoundational";
-
+import TempFoundational from "./components/FoundationalReact/TempFoundational";
+import TempIntermediate from "./components/IntermediateReact/TempIntermediate";
 function App() {
   return (
     <>
@@ -11,6 +11,7 @@ function App() {
         learning React with makers
       </h1>
       <TempFoundational></TempFoundational>
+      <TempIntermediate></TempIntermediate>
     </>
   );
 }

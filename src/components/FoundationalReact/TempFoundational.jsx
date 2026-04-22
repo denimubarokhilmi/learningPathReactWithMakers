@@ -5,12 +5,12 @@ import StateAndProps from "./State_Props";
 function TempFoundational() {
   return (
     <div>
-      <h1>1. Foundational React : </h1>
+      <h2>1. Foundational React : </h2>
       <ComponentWithFunction></ComponentWithFunction>
       <Greeting></Greeting>
 
-      <EventHandling></EventHandling>
       <StateAndProps></StateAndProps>
+      <EventHandling></EventHandling>
     </div>
   );
 }
