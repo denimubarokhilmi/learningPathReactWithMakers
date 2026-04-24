@@ -1,5 +1,6 @@
 import ConditionalRendering from "./ConditionalRendering";
 import List from "./RenderingList";
+import ButtonScooped from "./CSSinJS";
 function TempIntermediate() {
   return (
     <div
@@ -13,6 +14,7 @@ function TempIntermediate() {
       <ConditionalRendering></ConditionalRendering>
       <h4>Rendering List :</h4>
       <List></List>
+      <ButtonScooped></ButtonScooped>
     </div>
   );
 }
