@@ -1,6 +1,7 @@
 import ConditionalRendering from "./ConditionalRendering";
 import List from "./RenderingList";
 import ButtonScooped from "./CSSinJS";
+import ExampleFormik from "./Formik";
 function TempIntermediate() {
   return (
     <div
@@ -15,6 +16,7 @@ function TempIntermediate() {
       <h4>Rendering List :</h4>
       <List></List>
       <ButtonScooped></ButtonScooped>
+      <ExampleFormik></ExampleFormik>
     </div>
   );
 }
