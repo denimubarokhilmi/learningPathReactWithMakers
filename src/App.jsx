@@ -1,5 +1,6 @@
 import TempFoundational from "./components/FoundationalReact/TempFoundational";
 import TempIntermediate from "./components/IntermediateReact/TempIntermediate";
+import TempAdvanceReact from "./components/AdvanceReact/TempAdvanceReact";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
       </h1>
       <TempFoundational></TempFoundational>
       <TempIntermediate></TempIntermediate>
+      <TempAdvanceReact></TempAdvanceReact>
     </>
   );
 }
