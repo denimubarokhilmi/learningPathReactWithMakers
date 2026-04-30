@@ -4,13 +4,13 @@ import TempAdvanceReact from "./components/AdvanceReact/TempAdvanceReact";
 function App() {
   return (
     <>
-      <h1
+      {/* <h1
         style={{
           textAlign: "center",
         }}
       >
         learning React with makers
-      </h1>
+      </h1> */}
       <TempFoundational></TempFoundational>
       <TempIntermediate></TempIntermediate>
       <TempAdvanceReact></TempAdvanceReact>
