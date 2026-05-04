@@ -6,6 +6,7 @@ import {
   ExampleErrorComponent,
 } from "./ErrorBoundary&Lazy/ErrorBoundary";
 import LazyLoading from "./ErrorBoundary&Lazy/Lazy";
+import Dashboard from "./HOC/Profile";
 
 export default function TempAdvanceReact() {
   return (
@@ -17,6 +18,7 @@ export default function TempAdvanceReact() {
         <ExampleErrorComponent></ExampleErrorComponent>
       </ErrorBoundary>
       <LazyLoading></LazyLoading>
+      <Dashboard></Dashboard>
     </>
   );
 }
