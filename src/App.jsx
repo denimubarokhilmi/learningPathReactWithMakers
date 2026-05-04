@@ -1,6 +1,7 @@
 import TempFoundational from "./components/FoundationalReact/TempFoundational";
 import TempIntermediate from "./components/IntermediateReact/TempIntermediate";
 import TempAdvanceReact from "./components/AdvanceReact/TempAdvanceReact";
+import TempToolBestParactice from "./components/Tools&BestParactice/TempTool&BestParactice";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <TempFoundational></TempFoundational>
       <TempIntermediate></TempIntermediate>
       <TempAdvanceReact></TempAdvanceReact>
+      <TempToolBestParactice></TempToolBestParactice>
     </>
   );
 }
