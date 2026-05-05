@@ -7,6 +7,7 @@ import {
 } from "./ErrorBoundary&Lazy/ErrorBoundary";
 import LazyLoading from "./ErrorBoundary&Lazy/Lazy";
 import Dashboard from "./HOC/Profile";
+import MyAPPS from "./Performance/PerformanceOptimization";
 
 export default function TempAdvanceReact() {
   return (
@@ -19,6 +20,7 @@ export default function TempAdvanceReact() {
       </ErrorBoundary>
       <LazyLoading></LazyLoading>
       <Dashboard></Dashboard>
+      <MyAPPS></MyAPPS>
     </>
   );
 }
