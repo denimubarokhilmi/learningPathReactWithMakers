@@ -1,10 +1,11 @@
-export default function WithLogger(WrapComponent) {
+// eslint-disable-next-line no-unused-vars
+export default function WithLogger(WrappedComponent) {
   return function EnhancedComponent(props) {
     // example logic
     console.log(`Props : ${props}`);
     return (
       <>
-        <WrapComponent {...props}></WrapComponent>
+        <WrappedComponent {...props} />
       </>
     );
   };

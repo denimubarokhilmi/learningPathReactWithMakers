@@ -78,10 +78,11 @@ function ProfileLast(props) {
   );
 }
 
+const ProfileWrapper = WithLogger(Profile);
+const ProfileWrapperSecond = WithLogger(ProfileSecond);
+const ProfileWrapperLast = WithLogger(ProfileLast);
+
 export default function Dashboard() {
-  const ProfileWrapper = WithLogger(Profile);
-  const ProfileWrapperSecond = WithLogger(ProfileSecond);
-  const ProfileWrapperLast = WithLogger(ProfileLast);
   return (
     <div
       style={{

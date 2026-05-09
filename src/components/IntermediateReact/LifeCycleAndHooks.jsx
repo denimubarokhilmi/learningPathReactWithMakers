@@ -37,7 +37,7 @@ function RenderSpecificDependency() {
   return (
     <div className="render-with-dependency">
       <p>State : {state}</p>
-      <button onClick={(e) => setState(state + 1)}>change state</button>
+      <button onClick={() => setState(state + 1)}>change state</button>
     </div>
   );
 }
@@ -55,3 +55,5 @@ function CleanUp() {
     </div>
   );
 }
+
+export { OnceAfterRender, EveryRender, RenderSpecificDependency, CleanUp };

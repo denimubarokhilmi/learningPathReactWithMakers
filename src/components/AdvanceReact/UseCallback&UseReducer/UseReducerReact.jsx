@@ -1,4 +1,4 @@
-import { useReducer, useCallback, useEffect, useRef } from "react";
+import { useReducer, useCallback } from "react";
 import styled from "styled-components";
 
 const initialState = { player: "", isPlaying: "", computer: "", winners: "" };
@@ -96,46 +96,49 @@ function reducer(state, action) {
 export default function ExampleReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const winner = (props) => {
-    const { player, computer } = props;
-    if (player == computer) {
-      dispatch({
-        type: "winner",
-        winner: "Draw",
-      });
-      return;
-    }
-    if (player == "batu" && computer == "gunting") {
-      dispatch({
-        type: "winner",
-        winner: "You Win",
-      });
-      return;
-    }
-    if (player == "kertas" && computer == "batu") {
-      dispatch({
-        type: "winner",
-        winner: "You Win",
-      });
-      return;
-    }
-    if (player == "gunting" && computer == "kertas") {
-      dispatch({
-        type: "winner",
-        winner: "You Win",
-      });
-      return;
-    }
+  const winner = useCallback(
+    (props) => {
+      const { player, computer } = props;
+      if (player == computer) {
+        dispatch({
+          type: "winner",
+          winner: "Draw",
+        });
+        return;
+      }
+      if (player == "batu" && computer == "gunting") {
+        dispatch({
+          type: "winner",
+          winner: "You Win",
+        });
+        return;
+      }
+      if (player == "kertas" && computer == "batu") {
+        dispatch({
+          type: "winner",
+          winner: "You Win",
+        });
+        return;
+      }
+      if (player == "gunting" && computer == "kertas") {
+        dispatch({
+          type: "winner",
+          winner: "You Win",
+        });
+        return;
+      }
 
-    dispatch({
-      type: "winner",
-      winner: "You Lose",
-    });
-    return;
-  };
+      dispatch({
+        type: "winner",
+        winner: "You Lose",
+      });
+      return;
+    },
+    [dispatch]
+  );
 
   const choiceComputer = useCallback(() => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const now = new Date();
       const idInterval = setInterval(() => {
         let index = Math.floor(Math.random() * 3);
@@ -153,7 +156,7 @@ export default function ExampleReducer() {
         });
       }, 50);
     });
-  }, [state]);
+  }, [dispatch]);
 
   const handleSubmit = useCallback(
     async (e) => {
@@ -164,8 +167,9 @@ export default function ExampleReducer() {
         computer: choiceComp,
       });
     },
-    [choiceComputer, state.computer],
+    [choiceComputer, state.player, winner]
   );
+
   return (
     <div className="example-reducer">
       <h2

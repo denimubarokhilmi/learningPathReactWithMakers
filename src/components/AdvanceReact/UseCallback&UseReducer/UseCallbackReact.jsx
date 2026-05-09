@@ -12,7 +12,7 @@ export default function ExampleUseCallback() {
   const handleClick = useCallback(() => {
     // setCount(count + 1);
     console.log("handle clicked");
-  });
+  }, []);
 
   return (
     <div className="example-use-useCallback">
@@ -24,7 +24,7 @@ export default function ExampleUseCallback() {
         usage UseCallback :
       </h2>
       <p>Count : {count}</p>
-      <button onClick={(e) => setCount(count + 1)}>count</button>
+      <button onClick={() => setCount(count + 1)}>count</button>
       <ChildComp onClicks={handleClick}></ChildComp>
     </div>
   );

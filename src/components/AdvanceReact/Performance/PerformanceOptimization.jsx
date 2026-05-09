@@ -42,7 +42,7 @@ export default function MyAPPS() {
       }}
     >
       <p>State : {state}</p>
-      <button onClick={(e) => setState(state + 1)}>Change State</button>
+      <button onClick={() => setState(state + 1)}>Change State</button>
       <Greeting name="deni"></Greeting>
     </div>
   );
